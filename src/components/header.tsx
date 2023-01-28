@@ -5,7 +5,7 @@ import logoImg from "../../public/red-x-on-pickle.png";
 const Header = () => {
   return (
     <header className="flex justify-center py-10">
-      <nav className="w-9/12 grid grid-cols-5 items-center">
+      <nav className="w-5/12 grid grid-cols-5 items-center">
         <div className="w-20">
           <Image src={logoImg} alt="로고 이미지" />
         </div>
