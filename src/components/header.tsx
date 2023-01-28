@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { IconBrandGithub } from "@tabler/icons-react";
+import { IconUser } from "@tabler/icons-react";
 import { IconQuestionMark } from "@tabler/icons-react";
 import logoImg from "../../public/red-x-on-pickle.png";
 import Link from "next/link";
@@ -19,7 +19,7 @@ const Header = () => {
           <ul className="flex gap-4">
             <li>
               <a href="https://github.com/tyange">
-                <IconBrandGithub stroke={2} size={30} />
+                <IconUser stroke={2} size={30} />
               </a>
             </li>
             <li>
