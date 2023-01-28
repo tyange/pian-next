@@ -1,24 +1,32 @@
 import Image from "next/image";
 
+import { IconBrandGithub } from "@tabler/icons-react";
+import { IconQuestionMark } from "@tabler/icons-react";
 import logoImg from "../../public/red-x-on-pickle.png";
+import Link from "next/link";
 
 const Header = () => {
   return (
     <header className="flex justify-center py-10">
-      <nav className="w-5/12 grid grid-cols-5 items-center">
+      <nav className="grid items-center w-5/12 grid-cols-5">
         <div className="w-20">
           <Image src={logoImg} alt="로고 이미지" />
         </div>
         <div>
-          <ul className="flex gap-5">
-            <li>공지</li>
-            <li>버거들</li>
-          </ul>
+          <ul className="flex gap-5"></ul>
         </div>
-        <div className="col-span-3 justify-self-end mr-10">
+        <div className="col-span-3 mr-10 justify-self-end">
           <ul className="flex gap-3">
-            <li>github</li>
-            <li>QM</li>
+            <li>
+              <a href="https://github.com/tyange">
+                <IconBrandGithub stroke={2} size={30} />
+              </a>
+            </li>
+            <li>
+              <Link href="">
+                <IconQuestionMark stroke={2} size={30} />
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
