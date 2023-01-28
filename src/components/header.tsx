@@ -16,7 +16,7 @@ const Header = () => {
           <ul className="flex gap-5"></ul>
         </div>
         <div className="col-span-3 mr-10 justify-self-end">
-          <ul className="flex gap-3">
+          <ul className="flex gap-4">
             <li>
               <a href="https://github.com/tyange">
                 <IconBrandGithub stroke={2} size={30} />
