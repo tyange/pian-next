@@ -20,7 +20,12 @@ const Paginator = ({ pageData }: PaginatorProps) => {
         </Link>
       </button>
       {Array.from(Array(pageData.TotalPages + 1).keys()).map((page) => (
-        <button key={page}>
+        <button
+          key={page}
+          className={
+            pageData.CurrentPage === page + 1 ? "font-bold" : "text-gray-500"
+          }
+        >
           <Link href={`/${page + 1}`}>{page + 1}</Link>
         </button>
       ))}
