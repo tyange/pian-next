@@ -8,7 +8,7 @@ type BurgerListProps = {
 const BurgerList = ({ data }: BurgerListProps) => {
   return (
     <div className="flex justify-center w-full">
-      <ul className="flex flex-col w-5/12 h-full gap-10">
+      <ul className="flex flex-col items-center w-5/12 h-full gap-10">
         {data.Burgers.map((burger, index) => (
           <BurgerItem key={index} burger={burger} />
         ))}
