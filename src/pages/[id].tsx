@@ -4,27 +4,25 @@ import axios from "axios";
 import Layout from "@/components/layout";
 import BurgerList from "@/components/burger-list";
 import Paginator from "@/components/paginator";
-import { Burger, PageData } from "@/types/burger";
+import { GetServerSideProps } from "next";
+import { BurgersPageData } from ".";
 
-export type BurgersPageData = {
-  Burgers: Burger[];
-  PageData: PageData;
-};
-
-type HomeProps = {
+type BurgerPageProps = {
   data: BurgersPageData;
 };
 
-export async function getServerSideProps() {
-  const res = await axios.get(`http://127.0.0.1:8080/burger`);
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const res = await axios.get(
+    `http://127.0.0.1:8080/burger?page=${context.params?.id}`
+  );
   const data = res.data;
 
   return {
     props: { data },
   };
-}
+};
 
-const Home = ({ data }: HomeProps) => {
+const BurgerPage = ({ data }: BurgerPageProps) => {
   return (
     <>
       <Head>
@@ -45,4 +43,4 @@ const Home = ({ data }: HomeProps) => {
   );
 };
 
-export default Home;
+export default BurgerPage;
