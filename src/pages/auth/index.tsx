@@ -6,7 +6,9 @@ const AuthPage = () => {
   return (
     <Layout>
       <div className="flex items-center justify-center w-full h-full">
-        <GoogleOAuthProvider clientId="1011477403135-dmshjbtmu170012oummr6cblvob886l4.apps.googleusercontent.com">
+        <GoogleOAuthProvider
+          clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID!}
+        >
           <GoogleLogin
             onSuccess={async (credentialResponse) => {
               const credential = credentialResponse.credential;
